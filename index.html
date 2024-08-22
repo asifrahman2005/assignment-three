@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- DaisyUi CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,6 +21,9 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        all_btn_bg: '#ABEF5F',
+                        arrow_bg: '#1C1C1C',
+                        arrow_bg_green: '#ABEF5F80',
                     }
                 }
             }
@@ -33,7 +38,73 @@
 </head>
 
 <body>
+    <!-- Header Section -->
+    <header class="w-11/12 md:w-10/12 mx-auto">
+        <!-- Navbar Section -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <i class="fa-solid fa-arrow-right -rotate-45 bg-all_btn_bg my-10 p-[7px] rounded-full"></i>
+                <a class="btn btn-ghost text-2xl font-bold">Rinterio</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal text-[15px] px-1">
+                    <li class="font-bold text-gray-600"><a>Home</a></li>
+                    <li class="text-gray-500"><a>Services</a></li>
+                    <li class="text-gray-500"><a>Portfolio</a></li>
+                    <li class="text-gray-500"><a>Blogs</a></li>
+                    <li class="text-gray-500"><a>Contact Us</a></li>
+                </ul>
+            </div>
 
+            <div class="navbar-end">
+                <div class="mr-4 md:flex hidden lg:flex">
+                    <i class="fa-solid fa-magnifying-glass mr-2 border p-2 rounded-full text-gray-500"></i>
+                    <i class="fa-solid fa-cart-shopping border p-[7px] rounded-full text-gray-500"></i>
+                </div>
+                <div class="btn bg-all_btn_bg rounded-full hidden md:flex lg:flex">
+                    <a class="text-[17px] font-bold">Book Consult</a>
+                    <i class="fa-solid fa-arrow-right -rotate-45 bg-arrow_bg p-2 rounded-full text-white"></i>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-2 p-2 shadow">
+                    <li><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a>Blogs</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Banner Section -->
+        <div class=" mt-6">
+            <!--Banner Image -->
+            <div class=" w-full h-full md:w-[570px] md:h-[350px] mx-auto">
+                <img class="h-full w-full" src="assets/banner.png" alt="">
+            </div>
+            <!-- Banner Text -->
+            <div class="text-center md:px-12 mt-3">
+                <h1 class="text-[40px] md:text-[46px]  text-black  font-bold leading-none">A barn house of this design has a striking appearance</h1>
+                <p class="lg:text-[15px] text-[25px] md:px-[100px] text-gray-500 mt-6">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+
+                <!-- Banner btn  -->
+                <div class="btn bg-arrow_bg_green rounded-full w-full md:w-[220px] mt-6">
+                    <a class="mr-1 text-[17px] font-bold">View Details</a>
+                    <i class="fa-solid fa-arrow-right bg-all_btn_bg p-[7px] -rotate-45 rounded-full"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
 </body>
 
 </html>
